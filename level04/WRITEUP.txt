@@ -1,0 +1,47 @@
+1.
+
+У класі Breakout - ці змінні винесені чисто для зручності комутування між методами.
+
+private boolean play;
+private int life;
+private int brick;
+private final PaddleElement paddle;
+private final BallElement ball;
+private final BrickArrayElement brickArray;
+private final GLabel label;
+
+
+У класі PaddleElement - ці змінні винесені чисто для зручності комутування між методами.
+
+private int mouseX;
+private final int windowWidth;
+private final int width, height;
+private final GRect element;
+
+
+У класі BallElement - ці змінні винесені чисто для зручності комутування між методами.
+
+public double vx, vy;
+private final int radius;
+private final GOval element;
+
+
+У класі BrickArrayElement - ці змінні винесені чисто для зручності комутування між методами.
+
+private final int countY;
+private final int countX;
+private final GRect[][] element;
+
+
+
+
+ 2.
+ Для програшу:
+- life стартує зі значення рівне NTURNS
+- Якщо м'яч впав в нижню стінку то віднімаємо життя.
+- Якщо life стає рівним 0, то гравець програв.
+
+Для виграшу:
+- brick стартує зі значення рівне NBRICKS_PER_ROW * NBRICK_ROWS
+- Це значення зменшується на 1 кожного разу коли brick видаляється.
+- Якщо brick стає рівним 0, то гравець виграв.
